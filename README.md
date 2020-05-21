@@ -1,5 +1,17 @@
 # Revit WPF Template
 
+![GitHub issues](https://img.shields.io/github/issues/mitevpi/revit-wpf-template)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/mitevpi/revit-wpf-template)
+![GitHub contributors](https://img.shields.io/github/contributors/mitevpi/revit-wpf-template)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/mitevpi/revit-wpf-template)
+![GitHub Release Date](https://img.shields.io/github/release-date/mitevpi/revit-wpf-template)
+![GitHub All Releases](https://img.shields.io/github/downloads/mitevpi/revit-wpf-template/total)
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mitevpi/revit-wpf-template)
+![GitHub repo size](https://img.shields.io/github/repo-size/mitevpi/revit-wpf-template)
+![GitHub](https://img.shields.io/github/license/mitevpi/revit-wpf-template)
+
 WPF Template for Revit Add-Ins including wrapped external methods for execution in a "Valid Revit API Context"
 
 ![Window A](assets/window1.png)
@@ -11,13 +23,16 @@ WPF Template for Revit Add-Ins including wrapped external methods for execution 
 
 ### Build
 
-Clone/download this repository and open the `.sln` at the root of the repository with Microsoft Visual Studio.
-Building the solution will automatically create and copy the add-in files to the folder for Revit 2019. Upon opening
-Revit 2019, there should be a tab called "Template" in Revit, with a button to launch the WPF add-in.
+1. Clone/download this repository and open the `.sln` at the root of the repository with Microsoft Visual Studio.
+2. Re-link references to `RevitAPI.dll` and others which may be missing.
+3. Build the solution - Building the solution will automatically create and copy the add-in files to the folder for Revit 2019.
+4. Open Revit - Upon opening Revit 2019, there should be a tab called "Template" in Revit, with a button to launch the WPF add-in.
 
 ### Customize
 
-In order to use this as a starter for your application, make sure you first refactor the content in the application files (namespace, assembly name, classes, GUID, etc.)
+In order to use this as a starter for your application, make sure you first refactor the content in the application files (namespace, assembly name, classes, GUID, etc.) and remove the [assets](/assets) folder in this repository.
+
+A guide to refactoring can be found in the [docs](/docs/RefactorInstructions.md) folder.
 
 ## Documentation
 
@@ -26,4 +41,4 @@ Documentation is created using [Sandcastle Help File Builder](https://github.com
 The documentation can be found in the [docs](/docs) folder in the root of this repository. The following documentation sources are created by [Sandcastle Help File Builder](https://github.com/EWSoftware/SHFB):
 
 1. [`.chm`](./docs/Help/Revit%20WPF%20Template%20Documentation.chm) - This is an interactive help file which can be launched by double-clicking on any Windows machine.
-2. [`index.html`](./docs/Help/index.html) - This is the documentation compiled for web deployment. Please note that many of the supporting files needed to deploy the documentation to the web have been git-ignored due to their size and count. Make sure to compile documentation yourself using [Sandcastle Help File Builder](https://github.com/EWSoftware/SHFB) prior to trying to use/deploy the web version of the documentation.
+2. [`index.html`](./docs/Help/index.html) - This is the documentation compiled for web deployment. Please note that many of the supporting files needed to deploy the documentation to the web have been git-ignored due to their size and count. Make sure to compile documentation yourself using [Sandcastle Help File Builder](https://github.com/EWSoftware/SHFB) prior to trying to use/deploy the web version of the documentation. A preview of what this looks like can be [found here](https://revit-wpf-template-docs.now.sh).
